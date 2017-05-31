@@ -49,7 +49,7 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.12.2)
+    coffee-script-source (1.8.0)
     erubis (2.7.0)
     execjs (2.7.0)
     globalid (0.3.7)
@@ -156,6 +156,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-jdbcpostgresql-adapter
   coffee-rails (~> 4.0.0)
+  coffee-script-source (= 1.8.0)
   jbuilder (~> 2.0)
   jquery-rails
   puma
@@ -172,4 +173,4 @@ RUBY VERSION
    ruby 2.3.1p0 (jruby 9.1.8.0)
 
 BUNDLED WITH
-   1.13.1
+   1.14.6

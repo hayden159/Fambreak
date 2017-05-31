@@ -40,3 +40,7 @@ gem 'puma'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'coffee-script-source', '1.8.0'
+
+gem 'sprockets', '~> 3.0'

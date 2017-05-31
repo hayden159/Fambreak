@@ -11,12 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707111715) do
+ActiveRecord::Schema.define(version: 20170524195831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "widgets", force: true do |t|
+  create_table "creator", force: :cascade do |t|
+    t.string   "login_info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fams", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "receive_time"
+    t.text     "data"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.string   "name"
+    t.boolean  "accepted"
+    t.text     "attributes"
+    t.text     "post_primary"
+    t.text     "post2"
+    t.text     "post3"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "user", force: :cascade do |t|
+    t.string   "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "widgets", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "stock"
