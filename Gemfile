@@ -43,4 +43,4 @@ gem 'puma'
 
 gem 'coffee-script-source', '1.8.0'
 
-gem 'sprockets', '~> 3.0'
+gem 'sprockets', '~> 2.12.4'
