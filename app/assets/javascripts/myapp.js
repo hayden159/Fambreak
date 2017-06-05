@@ -3,9 +3,16 @@
  */
 (function() {
 
-var myapp = angular.module('myApp', []);
-myapp.controller('MyAppController', function(){
+var myApp = angular.module('myApp', []);
+myApp.controller('MyAppController', function(){
     this.title = "Welcome";
 });
+
+
+var creatorApp = angular.module('creatorApp', []);
+creatorApp.controller('CreatorController', function($scope, creatorAppInitializer){
+    $scope.members = initializer;
+});
+
 
 })();
