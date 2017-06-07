@@ -4,15 +4,21 @@
 (function() {
 
 var myApp = angular.module('myApp', []);
+console.log("myApp defined")
 myApp.controller('MyAppController', function(){
-    this.title = "Welcome";
+    this.title=function() {
+        var page =  location.href.split("/").slice(-1);
+        if(page=="" || page=="#") {
+            return "Welcome";
+        }
+        if(page=="fambuild") {
+            return "New fam"
+        }
+        return "Fambreak";
+    }
 });
-
-
-var creatorApp = angular.module('creatorApp', []);
-creatorApp.controller('CreatorController', function($scope, creatorAppInitializer){
-    $scope.members = initializer;
+myApp.controller('CreatorController', function(){
+    this.name="Choose name"
 });
-
 
 })();

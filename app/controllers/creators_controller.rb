@@ -1,10 +1,15 @@
 class CreatorsController < ApplicationController
 
-  @members = ["jo", "john"]
+  before_action :set_fam, only: [:name_fam]
 
-  # GET /create
-  def add_members
 
+  # Enter name form submission
+  def name_fam
+    @fam = Fam.new
+  end
+
+  def save_name(family)
+    family.save
   end
 
 end

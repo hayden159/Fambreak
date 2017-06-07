@@ -1,0 +1,26 @@
+.italic {
+    font-style: italic;
+    font-size: 60%;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+.affix + .container-fluid {
+    padding-top: 70px;
+}
+
+.steps {
+    text-align: center;
+}
+
+.steps span{
+    color: #6699ff; /* blue */;
+}
+
+.navtext {
+    font-size: 80%;
+    vertical-align: text-bottom;
+}

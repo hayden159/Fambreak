@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  get 'create' => 'creators#add_members'
+  get 'fambuild' => 'creators#edit_fam_app'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
