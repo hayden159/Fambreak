@@ -58,3 +58,14 @@ p {font-size: 16px;}
 .white {
     color: white;
 }
+
+.logo {
+    font-size: 80%;
+    color:  #6699ff;
+    text-align: center;
+}
+
+.container-m {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}

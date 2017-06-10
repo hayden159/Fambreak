@@ -5,20 +5,24 @@
 
 var myApp = angular.module('myApp', []);
 console.log("myApp defined")
+
+app.config(function($routeProvider) {
+    $routeProvider
+        .when("/", {
+            templateUrl : "index.html.erb"
+            controller : MyAppController
+        })
+        .when("/fambuilder", {
+            templateUrl : "edit_fam_app.html.erb"
+            controller : CreatorController
+        })
+});
+
 myApp.controller('MyAppController', function(){
-    this.title=function() {
-        var page =  location.href.split("/").slice(-1);
-        if(page=="" || page=="#") {
-            return "Welcome";
-        }
-        if(page=="fambuild") {
-            return "New fam"
-        }
-        return "Fambreak";
-    }
+
 });
 myApp.controller('CreatorController', function(){
-    this.name="Choose name"
+    this.name="Choose name";
 });
 
 })();
