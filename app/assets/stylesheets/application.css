@@ -23,21 +23,23 @@ body {
 p {font-size: 16px;}
 .margin {margin-bottom: 45px;}
 .bg-1 {
-    background-color: #00e64d; /* green */
+    background: #ffd480; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ffd480, #f0f0f0); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ffd480, #f0f0f0); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ffd480, #f0f0f0); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ffd480, #f0f0f0); /* Standard syntax */
     color: #ffffff;
 }
+
 .bg-2 {
-    background-color: #474e5d; /* Dark Blue */
-    color: #ffffff;
-}
-.bg-3 {
     background-color: #ffffff; /* White */
     color: #555555;
 }
-.bg-4 {
-    background-color: #2f2f2f; /* Black Gray */
-    color: #fff;
+.bg-3 {
+    background-color: lightgrey;
+    color: white;
 }
+
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -60,9 +62,13 @@ p {font-size: 16px;}
     color: white;
 }
 
+.logo-font {
+    font-family: 'Permanent Marker', 'sans-serif';
+}
+
 .logo {
     font-size: 80%;
-    color:  #00e64d;
+    color:  #ffd480;
     text-align: center;
 }
 
