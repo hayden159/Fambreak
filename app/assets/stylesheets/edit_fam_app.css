@@ -16,11 +16,27 @@
     text-align: center;
 }
 
-.steps span{
-    color: #6699ff; /* blue */;
+.steps {
+    color: #00e64d; /* green */;
 }
 
 .navtext {
     font-size: 80%;
     vertical-align: text-bottom;
+    text-align: center;
+}
+
+.navtext-fade {
+    font-size: 60%;
+    vertical-align: text-bottom;
+    color: lightgrey; !important;
+}
+
+.home span {
+    font-size: 80%;
+    padding: 10px 5px;
+}
+
+.home i {
+    padding: 3px;
 }

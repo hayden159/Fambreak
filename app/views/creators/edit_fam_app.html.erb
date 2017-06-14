@@ -1,15 +1,19 @@
-<div ng-app="myApp" ng-controller="CreatorController as ctr" ng-init="initialize()">
+
+
+<div ng-app="myApp" ng-controller="CreatorController as ctr" >
 
     <div class="navbar-default steps" data-spy="affix" data-offset-top="197">
 
-      <span ng-click="goback()" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="navtext"> {{ctr.name}} </span>
-      <span ng-click="advance()" class="name-fam glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span ng-show="ctr.name_index>0" class="navtext-fade"> {{ctr.name_options[(ctr.name_index-1) % ctr.name_options.length]}} </span>
+      <span  ng-show="ctr.name_index>0" ng-click="ctr.goback()" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="navtext"> {{ctr.name_options[ctr.name_index]}} </span>
+      <span ng-show="ctr.name_index!=ctr.name_options.length-1" ng-click="ctr.advance()" class="name-fam glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span ng-show="ctr.name_index!=ctr.name_options.length-1" class="navtext-fade"> {{ctr.name_options[(ctr.name_index+1) % ctr.name_options.length]}} </span>
 
     </div>
 
 
-  <div class="container-fluid bg-1 text-center">
+  <div ng-show="ctr.name_index==0" class="container-fluid bg-1 text-center">
 
 
 
@@ -26,4 +30,37 @@
 
 
   </div>
+
+  <div ng-show="ctr.name_index==1" class="container-fluid bg-1 text-center">
+
+
+
+    <p>When do you want your updates to be delivered?</p>
+    <div class="form-group">
+      <label for="sel1"></label>
+      <select class="form-control" id="sel1">
+        <option>7 pm Friday</option>
+        <option>12 pm Saturday</option>
+        <option>7 pm Saturday</option>
+        <option>Custom</option>
+      </select>
+    </div>
+
+
+
+  </div>
+
+
+  <div ng-show="ctr.name_index==2" class="container-fluid bg-1 text-center">
+
+
+
+    <div class="checkbox">
+      <label><input type="checkbox" value="">I accept the terms</label>
+    </div>
+
+
+
+  </div>
+
 </div>

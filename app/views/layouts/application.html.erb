@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body >
@@ -15,11 +14,12 @@
 <!-- Navbar -->
 
 <nav class="navbar navbar-default">
-  <div class="container-m text-center"><span class="logo">Fambreak</span></div>
+  <div class="container-m text-center"><a href=<%= root_path %> class="logo">Fambreak</a></div>
 </nav>
 
   <%= yield %>
 
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 </body>
 
