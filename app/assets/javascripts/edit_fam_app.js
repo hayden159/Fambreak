@@ -6,6 +6,9 @@
 
 
     myApp.controller('CreatorController', function () {
+
+        this.editingFam = false;
+
         this.name_index = 0;
         this.name_options = ["Choose name", "Setup", "Accept", "Add members"];
         this.advance = function() {

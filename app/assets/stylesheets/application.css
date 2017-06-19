@@ -17,17 +17,40 @@
 body {
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
-    color: #4dff88;
+    position: relative;
+    color: white;
 }
+
+.affix {
+    top: 20px;
+}
+
+.circle {
+    margin-top: 10px;
+    border-radius: 50%;
+    padding-top: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    box-shadow: gainsboro;
+    /* width and height can be anything, as long as they're equal */
+}
+
+.circle a {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+
 
 p {font-size: 16px;}
 .margin {margin-bottom: 45px;}
 .bg-1 {
     background: #ffd480; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#ffd480, #f0f0f0); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#ffd480, #f0f0f0); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#ffd480, #f0f0f0); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#ffd480, #f0f0f0); /* Standard syntax */
+    background: -webkit-linear-gradient(#ffd480, #ede9e9); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ffd480, #ede9e9); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ffd480, #ede9e9); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ffd480, #ede9e9); /* Standard syntax */
     color: #ffffff;
 }
 
@@ -46,13 +69,13 @@ p {font-size: 16px;}
     height: 100%;
 }
 .navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
     border: 0;
     border-radius: 0;
     margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 18px;
+    letter-spacing: 0px;
 }
 .navbar-nav  li a:hover {
     color: #8fbc8f;
@@ -66,13 +89,23 @@ p {font-size: 16px;}
     font-family: 'Permanent Marker', 'sans-serif';
 }
 
-.logo {
-    font-size: 80%;
-    color:  #ffd480;
-    text-align: center;
+.logo-nav {
+    color: #ffd480;
+    font-size: 20px;
+    padding-left: 20px;
 }
 
 .container-m {
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding: 5px;
+    border-radius: 3px;
+    border-color: red;
+}
+
+.navbar img {
+    max-width: 42px;
+}
+
+.navbarTxt {
+    text-align: center;
+    vertical-align: text-bottom;
 }

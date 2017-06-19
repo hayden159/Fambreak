@@ -1,16 +1,6 @@
 
 
-<div ng-app="myApp" ng-controller="CreatorController as ctr" >
 
-    <div class="navbar-default steps" data-spy="affix" data-offset-top="197">
-
-      <span ng-show="ctr.name_index>0" class="navtext-fade"> {{ctr.name_options[(ctr.name_index-1) % ctr.name_options.length]}} </span>
-      <span  ng-show="ctr.name_index>0" ng-click="ctr.goback()" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="navtext"> {{ctr.name_options[ctr.name_index]}} </span>
-      <span ng-show="ctr.name_index!=ctr.name_options.length-1" ng-click="ctr.advance()" class="name-fam glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span ng-show="ctr.name_index!=ctr.name_options.length-1" class="navtext-fade"> {{ctr.name_options[(ctr.name_index+1) % ctr.name_options.length]}} </span>
-
-    </div>
 
 
   <div ng-show="ctr.name_index==0" class="container-fluid bg-1 text-center">
@@ -63,4 +53,6 @@
 
   </div>
 
-</div>
+
+  <%= render "appNav" %>
+
