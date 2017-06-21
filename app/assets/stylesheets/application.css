@@ -21,10 +21,6 @@ body {
     color: white;
 }
 
-.affix {
-    top: 20px;
-}
-
 .circle {
     margin-top: 10px;
     border-radius: 50%;
@@ -32,8 +28,6 @@ body {
     width: 60px;
     height: 60px;
     background-color: white;
-    box-shadow: gainsboro;
-    /* width and height can be anything, as long as they're equal */
 }
 
 .circle a {
@@ -47,16 +41,20 @@ p {font-size: 16px;}
 .margin {margin-bottom: 45px;}
 .bg-1 {
     background: #ffd480; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#ffd480, #ede9e9); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#ffd480, #ede9e9); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#ffd480, #ede9e9); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#ffd480, #ede9e9); /* Standard syntax */
+    background: -webkit-linear-gradient(#ffd480, #ff9966); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ffd480, #ff9966); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ffd480, #ff9966); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ffd480, #ff9966); /* Standard syntax */
     color: #ffffff;
 }
 
 .bg-2 {
-    background-color: #ffffff; /* White */
-    color: #555555;
+    background: #ffd480; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ffd480, #63dbd1); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ffd480, #63dbd1); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ffd480, #63dbd1); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ffd480, #63dbd1); /* Standard syntax */
+    color: #ffffff;
 }
 .bg-3 {
     background-color: lightgrey;
@@ -108,4 +106,17 @@ p {font-size: 16px;}
 .navbarTxt {
     text-align: center;
     vertical-align: text-bottom;
+}
+
+.affix .home {
+    top:0;
+    z-index: 9999 !important;
+}
+.home {
+    margin-bottom: 0px;
+}
+
+.affix ~ .container-fluid {
+    position: relative;
+    top: 50px;
 }

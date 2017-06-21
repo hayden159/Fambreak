@@ -10,11 +10,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body ng-app="myApp" ng-controller="CreatorController as ctr" data-spy="scroll" data-target="#myScrollspy" data-offset="15" >
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15" >
 
 <!-- home icon -->
 <div class="col-xs-3" id="myScrollspy">
-  <div class="container circle" data-spy="affix" data-offset-top="205">
+  <div class="container circle home" data-spy="affix">
     <a href=<%= root_path %>><%= image_tag "acorn.svg" %></a>
   </div>
 </div>
@@ -22,9 +22,7 @@
 
   <%= yield %>
 
-<footer class="bg-3">
-  <p class="container-m text-center logo-font">copyright 2017 Fambreak</p>
-</footer>
+
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 

@@ -1,42 +1,66 @@
+
+.loading {
+    background-color: white;
+    height: 100vh;
+    color: grey;
+    text-align: center;
+    font-size: 80%;
+}
+
+.loading p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.fill-screen {
+    height: 100vh;
+}
+
+.icons-rails {
+    display:none;
+    visibility: hidden;
+}
+
 .italic {
     font-style: italic;
     font-size: 60%;
 }
 
-.affix {
-    top: 0;
-    width: 100%;
-}
-
-.affix + .container-fluid {
-    padding-top: 70px;
-}
 
 .steps {
     text-align: center;
+    border-top: 1px solid white;
+    background-color: lightgrey;
+    width: 100%;
+    padding-top: 10px;
 }
 
-.steps {
-    color: #ffd480; /* yellow from background */;
+.navcircle {
+    border-radius: 50%;
+    padding-top: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
 }
 
 .navtext {
-    font-size: 80%;
+    color: #ffd480;
+    font-size: inherit;
     vertical-align: text-bottom;
     text-align: center;
 }
 
 .navtext-fade {
-    font-size: 60%;
+    font-size: inherit;
     vertical-align: text-bottom;
     color: lightgrey;
 }
 
-.home span {
-    font-size: 80%;
-    padding: 10px 5px;
+
+.affix #edit-fam-nav  {
+    bottom: 30px;
 }
 
-.home i {
-    padding: 3px;
-}
+
