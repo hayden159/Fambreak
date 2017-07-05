@@ -31,10 +31,20 @@
 
 .steps {
     text-align: center;
-    border-top: 1px solid white;
-    background-color: lightgrey;
+    background-color: white;
     width: 100%;
     padding-top: 10px;
+    height: 60px;
+}
+
+.steps span {
+    padding: 0px 20px;
+    color: #ff9966;
+}
+
+.steps span.active {
+    padding: 0px 20px;
+    color: ##ffd480;
 }
 
 .navcircle {
@@ -63,4 +73,46 @@
     bottom: 30px;
 }
 
+#edit-fam-nav i {
+    width: 10px;
+    color: white;
+    padding: 0px 5px;
+}
+
+
+/*New fam*/
+ul {
+    padding-left: 0px;
+    padding-top: 20px;
+}
+
+.showfams li {
+    width: 40%;
+    height: 120px;
+    list-style: none;
+    background: rgba(255,255,255, 0.2);
+    border: 4px dashed white;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    display: inline-grid;
+    padding: 10px;
+}
+
+.showfams span {
+    display: block;
+}
+
+.showfams li.estfam {
+    background: white;
+    color: #ffd480;
+}
+
+.showfams span {
+    font-size: 50px;
+}
+
+.newfam-square {
+    font-size: 80px;
+}
 

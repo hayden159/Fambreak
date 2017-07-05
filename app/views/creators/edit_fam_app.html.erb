@@ -2,85 +2,92 @@
 
   <div class="loading" ng-hide="ctr.init()"><p>Loading ...</p></div>
 
-  <div ng-hide="!ctr.ready" >
-  <div class="container-fluid bg-1 text-center fill-screen">
-
-    <div ng-show="ctr.name_index==0" >
+  <div class="fill-screen" ng-hide="!ctr.ready" >
 
 
+    <div class="container-fluid bg-1 text-center banner">
 
-        <div class="form-group media-middle">
-          <label for="usr">Fam Name:</label>
-          <input type="text" class="form-control" id="usr">
+      <div ng-show="ctr.name_index==0" >
+        <ul class="showfams" >
+            <li class="estfam" ng-repeat="fam in ctr.fams">{{fam}} <span>H</span></li>
+            <li class="newfam-square">+</li>
+        </ul>
+      </div>
+
+      <div ng-show="ctr.name_index==1" >
+
+
+
+          <div class="form-group media-middle">
+            <label for="usr">Fam Name:</label>
+            <input type="text" class="form-control" id="usr">
+          </div>
+
+        <br>
+        <h4>Need some inspiration?</h4>
+        <p class="italic">The family who likes turtles</p>
+        <p class="italic">Long lost </p>
+        <p class="italic">Smith</p>
+
+
+      </div>
+
+      <div ng-show="ctr.name_index==2" >
+
+
+
+        <p>When do you want your updates to be delivered?</p>
+        <div class="form-group">
+          <label for="sel1"></label>
+          <select class="form-control" id="sel1">
+            <option>7 pm Friday</option>
+            <option>12 pm Saturday</option>
+            <option>7 pm Saturday</option>
+            <option>Custom</option>
+          </select>
         </div>
 
-      <br>
-      <h4>Need some inspiration?</h4>
-      <p class="italic">The family who likes turtles</p>
-      <p class="italic">Long lost </p>
-      <p class="italic">Smith</p>
 
 
-    </div>
-
-    <div ng-show="ctr.name_index==1" >
-
-
-
-      <p>When do you want your updates to be delivered?</p>
-      <div class="form-group">
-        <label for="sel1"></label>
-        <select class="form-control" id="sel1">
-          <option>7 pm Friday</option>
-          <option>12 pm Saturday</option>
-          <option>7 pm Saturday</option>
-          <option>Custom</option>
-        </select>
       </div>
 
 
-
-    </div>
-
-
-    <div ng-show="ctr.name_index==2">
+      <div ng-show="ctr.name_index==3">
 
 
 
-      <div class="checkbox">
-        <label><input type="checkbox" value="">I accept the terms</label>
+        <div class="checkbox">
+          <label><input type="checkbox" value="">I accept the terms</label>
+        </div>
+
+
+
       </div>
 
-
-
-    </div>
-
-  </div>
-
-  <div class="icons-rails">
-    <span><%=image_tag "font.svg"%></span>
-    <span><%=image_tag "settings.svg"%></span>
-    <span><%=image_tag "tick-inside-circle.svg"%></span>
-    <span><%=image_tag "new-user.svg"%></span>
   </div>
 
 
 
-  <div id="edit-fam-nav" class="container text-center steps scrollspy affix" data-spy="affix" >
-
-    <span ng-show="ctr.name_index>0" class="navtext-fade navcircle">
-      <%= image_tag "font.svg" %>
-      {{ctr.name_options[(ctr.name_index-1) % ctr.name_options.length]}} </span>
-    <span  ng-show="ctr.name_index>0" ng-click="ctr.goback()" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="navtext navcircle"> {{ctr.name_options[ctr.name_index]}} </span>
-    <span ng-show="ctr.name_index!=ctr.name_options.length-1" ng-click="ctr.advance()" class="name-fam glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span ng-show="ctr.name_index!=ctr.name_options.length-1" class="navtext-fade navcircle">
-      <%=image_tag "settings.svg"%>
-      {{ctr.name_options[(ctr.name_index+1) % ctr.name_options.length]}} </span>
-
+  <div id="edit-fam-nav" class="text-center steps navbar-fixed-bottom" >
+    <span class="glyphicon glyphicon-plus"></span>
+    <span class="glyphicon glyphicon-font"></span>
+    <span class="glyphicon glyphicon-tasks"></span>
+    <span class="glyphicon glyphicon-check"></span>
+    <span class="glyphicon glyphicon-bullhorn"></span>
   </div>
+
+
+    <!--<span ng-show="ctr.name_index>0" class="navtext-fade navcircle">-->
+      <!--{{ctr.name_options[(ctr.name_index-1) % ctr.name_options.length]}} </span>-->
+    <!--<span  ng-show="ctr.name_index>0" ng-click="ctr.goback()" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+    <!--<span class="navtext navcircle"> {{ctr.name_options[ctr.name_index]}} </span>-->
+    <!--<span ng-show="ctr.name_index!=ctr.name_options.length-1" ng-click="ctr.advance()" class="name-fam glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+    <!--<span ng-show="ctr.name_index!=ctr.name_options.length-1" class="navtext-fade navcircle">-->
+      <!--{{ctr.name_options[(ctr.name_index+1) % ctr.name_options.length]}} </span>-->
+
 
   </div>
 
 </div>
 
+g

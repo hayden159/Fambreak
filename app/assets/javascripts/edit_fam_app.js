@@ -12,22 +12,15 @@
     myApp.controller('CreatorController', function () {
 
         this.ready = false;
+        this.fams = ["Haydens"]
 
         this.init = function () {
             console.log("ready")
-            this.icons = $j('.icons-rails span').toArray();
-            console.log("here: "+this.icons);
 
             this.name_index = 0;
             this.name_options = ["Name", "Setup", "Accept", "Add members"];
             this.ready = true;
 
-
-            $j('#edit-fam-nav').affix({
-                offset: {
-                    bottom: $j('#edit-fam-nav').offset().bottom
-                }
-            });
 
             return true;
         }
