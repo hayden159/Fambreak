@@ -12,25 +12,22 @@
     myApp.controller('CreatorController', function () {
 
         this.ready = false;
-        this.fams = ["Haydens"]
+        this.fams = ["Haydens", "The Adams"]
+        this.activeMenu = '';
 
         this.init = function () {
-            console.log("ready")
+            console.log("ready");
 
             this.name_index = 0;
-            this.name_options = ["Name", "Setup", "Accept", "Add members"];
             this.ready = true;
 
 
             return true;
         }
 
-        this.advance = function() {
-            this.name_index = (this.name_index+1) % this.name_options.length;
-            console.log(this.name_index);
-        }
-        this.goback = function() {
-            this.name_index = (this.name_index-1) % this.name_options.length;
+        this.advance = function(menuItem) {
+            console.log(menuItem);
+            this.activeMenu = menuItem;
         }
     });
 

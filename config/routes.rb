@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  get 'fambuild' => 'creators#edit_fam_app'
+  get 'myfams' => 'creators#edit_fam_app'
 
 
   # Example of regular route:

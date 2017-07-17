@@ -2,19 +2,21 @@
 
   <div class="loading" ng-hide="ctr.init()"><p>Loading ...</p></div>
 
-  <div class="fill-screen" ng-hide="!ctr.ready" >
+  <div class="fill-screen" ng-init="activeMenu='all_fams'" ng-cloak>
+
+    <div class="save"><span>save <i class="glyphicon glyphicon-save"></i></span></div>
 
 
     <div class="container-fluid bg-1 text-center banner">
 
-      <div ng-show="ctr.name_index==0" >
-        <ul class="showfams" >
-            <li class="estfam" ng-repeat="fam in ctr.fams">{{fam}} <span>H</span></li>
-            <li class="newfam-square">+</li>
-        </ul>
+      <div ng-show="activeMenu==='all_fams'" >
+        <div class="showfams" >
+            <div class="estfam" ng-repeat="fam in ctr.fams">{{fam}} <span>H</span></div>
+          <div class="newfam-square"><i class="glyphicon glyphicon-plus"></i></div>
+        </div>
       </div>
 
-      <div ng-show="ctr.name_index==1" >
+      <div ng-show="activeMenu==='name_fam'" >
 
 
 
@@ -23,16 +25,10 @@
             <input type="text" class="form-control" id="usr">
           </div>
 
-        <br>
-        <h4>Need some inspiration?</h4>
-        <p class="italic">The family who likes turtles</p>
-        <p class="italic">Long lost </p>
-        <p class="italic">Smith</p>
-
 
       </div>
 
-      <div ng-show="ctr.name_index==2" >
+      <div ng-show="activeMenu==='settings'" >
 
 
 
@@ -52,7 +48,20 @@
       </div>
 
 
-      <div ng-show="ctr.name_index==3">
+      <div ng-show="activeMenu==='terms'">
+
+
+
+        <div class="checkbox">
+          <label><input type="checkbox" value="">I accept the terms</label>
+        </div>
+
+
+
+      </div>
+
+
+      <div ng-show="activeMenu==='notify_fam'">
 
 
 
@@ -69,21 +78,13 @@
 
 
   <div id="edit-fam-nav" class="text-center steps navbar-fixed-bottom" >
-    <span class="glyphicon glyphicon-plus"></span>
-    <span class="glyphicon glyphicon-font"></span>
-    <span class="glyphicon glyphicon-tasks"></span>
-    <span class="glyphicon glyphicon-check"></span>
-    <span class="glyphicon glyphicon-bullhorn"></span>
+    <span ng-click="activeMenu = 'all_fams'" ng-class="{active : activeMenu === 'all_fams'}" class="glyphicon glyphicon-plus"></span>
+    <span ng-click="activeMenu = 'name_fam'" ng-class="{active : activeMenu === 'name_fam', grey : activeMenu === 'all_fams'}" class="glyphicon glyphicon-font"></span>
+    <span ng-click="activeMenu = 'settings'" ng-class="{active : activeMenu === 'settings', grey : activeMenu === 'all_fams'}" class="glyphicon glyphicon-tasks"></span>
+    <span ng-click="activeMenu = 'terms'" ng-class="{active : activeMenu === 'terms',  grey :activeMenu === 'all_fams'}" class="glyphicon glyphicon-check"></span>
+    <span ng-click="activeMenu = 'notify_fam'" ng-class="{active : activeMenu === 'notify_fam',  grey :activeMenu === 'all_fams'}" class="glyphicon glyphicon-bullhorn"></span>
   </div>
 
-
-    <!--<span ng-show="ctr.name_index>0" class="navtext-fade navcircle">-->
-      <!--{{ctr.name_options[(ctr.name_index-1) % ctr.name_options.length]}} </span>-->
-    <!--<span  ng-show="ctr.name_index>0" ng-click="ctr.goback()" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-    <!--<span class="navtext navcircle"> {{ctr.name_options[ctr.name_index]}} </span>-->
-    <!--<span ng-show="ctr.name_index!=ctr.name_options.length-1" ng-click="ctr.advance()" class="name-fam glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-    <!--<span ng-show="ctr.name_index!=ctr.name_options.length-1" class="navtext-fade navcircle">-->
-      <!--{{ctr.name_options[(ctr.name_index+1) % ctr.name_options.length]}} </span>-->
 
 
   </div>

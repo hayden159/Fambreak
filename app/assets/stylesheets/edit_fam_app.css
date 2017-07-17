@@ -1,3 +1,7 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 
 .loading {
     background-color: white;
@@ -34,17 +38,26 @@
     background-color: white;
     width: 100%;
     padding-top: 10px;
-    height: 60px;
+    height: 80px;
 }
 
 .steps span {
-    padding: 0px 20px;
+    padding: 8px 8px;
     color: #ff9966;
+    margin: 5px 15px;
+    border-radius: 100px;
+
 }
 
 .steps span.active {
-    padding: 0px 20px;
-    color: #ffd480;
+    color: white;
+    background-color: #ffd480;
+    padding: 15px;
+    margin: 5px 7px;
+}
+
+.steps span.grey {
+    color: whitesmoke;
 }
 
 .navcircle {
@@ -80,39 +93,63 @@
 }
 
 
+/*save btn*/
+.save {
+    width: 100%;
+    height: 40px;
+    padding-right: 20px;
+    padding-top: 2px;
+}
+
+.save span {
+    float: right;
+    color: #ffd480;
+}
+
+.save span .active{
+
+}
+
+
 /*New fam*/
-ul {
-    padding-left: 0px;
+div.showfams {
+    width: 100%;
     padding-top: 20px;
 }
 
-.showfams li {
-    width: 40%;
-    height: 120px;
-    list-style: none;
+.showfams div {
+    height: 100px;
     background: rgba(255,255,255, 0.2);
     border: 4px dashed white;
+    border-radius: 4px;
     margin: 10px;
-    font-size: 18px;
-    border-radius: 5px;
-    display: inline-grid;
-    padding: 10px;
+    padding-top: 30px;
 }
 
-.showfams span {
-    display: block;
-}
 
-.showfams li.estfam {
+.showfams div.estfam {
     background: white;
     color: #ffd480;
+    text-align: left;
+    padding-left: 20px;
 }
 
 .showfams span {
     font-size: 50px;
+    position: relative;
+    float: right;
+    top: -25px;
+    padding-right: 20px;
 }
 
-.newfam-square {
-    font-size: 80px;
+div.newfam-square {
+    height: 140px;
 }
+
+div.newfam-square i {
+    position: relative;
+    top: 5px;
+    font-size: 60px;
+}
+
 
