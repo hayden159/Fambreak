@@ -4,16 +4,22 @@
 
   <div class="fill-screen" ng-init="activeMenu='all_fams'" ng-cloak>
 
-    <div class="save"><span>save <i class="glyphicon glyphicon-save"></i></span></div>
+
 
 
     <div class="container-fluid bg-1 text-center banner">
 
       <div ng-show="activeMenu==='all_fams'" >
         <div class="showfams" >
-            <div class="estfam" ng-repeat="fam in ctr.fams">{{fam}} <span>H</span></div>
+
+          <% @fams.each do |fam| %>
+            <div class="estfam" ><%= fam.name %><span><%= fam.name[0] %></span></div>
+          <% end %>
           <div class="newfam-square"><i class="glyphicon glyphicon-plus"></i></div>
         </div>
+
+        <%# WILL NEED: ajax request for selected fam %>
+
       </div>
 
       <div ng-show="activeMenu==='name_fam'" >
@@ -76,15 +82,16 @@
   </div>
 
 
-
-  <div id="edit-fam-nav" class="text-center steps navbar-fixed-bottom" >
-    <span ng-click="activeMenu = 'all_fams'" ng-class="{active : activeMenu === 'all_fams'}" class="glyphicon glyphicon-plus"></span>
-    <span ng-click="activeMenu = 'name_fam'" ng-class="{active : activeMenu === 'name_fam', grey : activeMenu === 'all_fams'}" class="glyphicon glyphicon-font"></span>
-    <span ng-click="activeMenu = 'settings'" ng-class="{active : activeMenu === 'settings', grey : activeMenu === 'all_fams'}" class="glyphicon glyphicon-tasks"></span>
-    <span ng-click="activeMenu = 'terms'" ng-class="{active : activeMenu === 'terms',  grey :activeMenu === 'all_fams'}" class="glyphicon glyphicon-check"></span>
-    <span ng-click="activeMenu = 'notify_fam'" ng-class="{active : activeMenu === 'notify_fam',  grey :activeMenu === 'all_fams'}" class="glyphicon glyphicon-bullhorn"></span>
+  <div id="edit-fam-nav" class="text-center navbar-fixed-bottom">
+    <div class="save"><span>save <i class="glyphicon glyphicon-new-window"></i></span></div>
+    <div class="steps" >
+      <span ng-click="activeMenu = 'all_fams'" ng-class="{active : activeMenu === 'all_fams'}" class="glyphicon glyphicon-plus"></span>
+      <span ng-click="activeMenu === 'all_fams' ? activeMenu = 'name_fam'" ng-class="{active : activeMenu === 'name_fam', grey : activeMenu === 'all_fams'}" class="glyphicon glyphicon-font"></span>
+      <span ng-click="activeMenu === 'all_fams' ? activeMenu = 'settings'" ng-class="{active : activeMenu === 'settings', grey : activeMenu === 'all_fams'}" class="glyphicon glyphicon-tasks"></span>
+      <span ng-click="activeMenu === 'all_fams' ? activeMenu = 'terms'" ng-class="{active : activeMenu === 'terms',  grey :activeMenu === 'all_fams'}" class="glyphicon glyphicon-check"></span>
+      <span ng-click="activeMenu === 'all_fams' ? activeMenu = 'notify_fam'" ng-class="{active : activeMenu === 'notify_fam',  grey :activeMenu === 'all_fams'}" class="glyphicon glyphicon-bullhorn"></span>
+    </div>
   </div>
-
 
 
   </div>
