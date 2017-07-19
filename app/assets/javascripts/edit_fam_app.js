@@ -9,25 +9,23 @@
     console.log("myApp defined")
 
 
-    myApp.controller('CreatorController', function () {
+    myApp.controller('CreatorController', ['$scope',function($scope) {
 
-        this.ready = false;
-        this.fams = ["Haydens", "The Adams"]
-        this.activeMenu = '';
 
-        this.init = function () {
+
+        $scope.init = function () {
             console.log("ready");
+            $scope.activeMenu = 'all_fams'
+            $scope.fams = ["Haydens", "The Adams"];
 
-            this.name_index = 0;
-            this.ready = true;
-
-
+            $j('#loading').hide();
+            $j('.fill-screen').show();
             return true;
         }
 
-        this.advance = function(menuItem) {
+        $scope.advance = function(menuItem) {
             console.log(menuItem);
-            this.activeMenu = menuItem;
+            $scope.activeMenu = menuItem;
         }
-    });
+    }]);
 
