@@ -1,11 +1,23 @@
 
 class FamsController < ApplicationController
+  before_action :all_fams, only: [:my_fams, :create]
   before_action :set_fam, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :js
 
-  # GET /myfams
-  def my_fams
-    @fams = Fam.all
+
+  def new
+    @fam = Fam.new
   end
+
+  def create
+    Fam.create(:fams_params)
+  end
+
+  private
+
+    def all_fams
+      @fams = Fam.all
+    end
 
   # # GET /campers/1
   # def show

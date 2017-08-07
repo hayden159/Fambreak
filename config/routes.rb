@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'myfams' => 'fams#my_fams'
 
+  resources :fams, only: [:new]
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

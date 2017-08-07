@@ -13,11 +13,18 @@
 
           <% if @fams %>
             <% @fams.each do |fam| %>
-              <div class="estfam" ><%= fam.name %><span><%= fam.name[0] %></span></div>
+              <div data-remote="true"
+                   data-url="/update"
+                   data-params="id=10"
+                   data-method="put"
+                   class="estfam" ><span><%= fam.name[0] %></span><br><%= fam.name %></div>
             <% end %>
           <% end %>
-          <div class="newfam-square"><i class="glyphicon glyphicon-plus"></i></div>
+
+            <div class="newfam-square"><i class="glyphicon glyphicon-plus"></i></div>
         </div>
+
+        <div id="task-form" style="display:none;"></div>
 
         <%# WILL NEED: ajax request for selected fam %>
 
