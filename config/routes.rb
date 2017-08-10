@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'myfams' => 'fams#my_fams'
 
+  get 'start' => 'creators#start_fam'
+
   resources :fams, only: [:new]
 
 

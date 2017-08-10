@@ -1,0 +1,45 @@
+.index-button {
+    font-size: 3vw;
+
+}
+
+.index-button i {
+    font-size: 17vw;
+    padding: 10px;
+    display: block;
+    margin-top: 10vh;
+}
+
+.index-name {
+    text-align: left;
+    padding-left: 10vw;
+    margin-top: 30vh;
+    font-size: 8vw;
+}
+
+.index-button:focus {
+    color: white;
+}
+
+.logo-png {
+    position: absolute;
+    top: 60px;
+    right: -30vw;
+    width: 130vw;
+    opacity: 0.2;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
+}
+
+.tinytext {
+    font-size: 3.3vw;
+}
+
+.subheading {
+    position: relative;
+}
+
+.fill-page {
+    height: 100vh;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}

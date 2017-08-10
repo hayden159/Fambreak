@@ -124,30 +124,37 @@
 /*New fam*/
 div.showfams {
     padding-top: 20px;
-    display: flex;
 }
 
 .showfams div {
-    width: 80%;
     height: 140px;
     background: rgba(255,255,255, 0.3);
     border-radius: 16px;
-    margin: 10px;
     padding-top: 30px;
+
 }
 
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
 
 .showfams div.estfam {
     background: white;
     font-size: 17px;
     color: #ffd480;
     text-align: center;
-    padding-top: 50px;
 }
 
 .showfams span {
     font-size: 50px;
-    line-height: 0px;
+    line-height: 100%;
 }
 
 div.newfam-square i {

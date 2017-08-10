@@ -1,0 +1,13 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="160">
+  <defs>
+    <style type="text/css">
+      @font-face {
+      font-family: 'Permanent Marker';
+      src: url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+      }
+    </style>
+  </defs>
+  <circle cx="80" cy="80" r="80" stroke-width="3" fill="white" />
+		<text x="18" y="100" style="font-family: 'Permanent Marker',Arial,sans-serif;font-weight:bold;font-size:100; fill :#ffd480; ">FM</text>
+		<text x="10" y="144" style="font-family: 'Permanent Marker',Arial,sans-serif;font-weight:bold;font-size:84; fill :#ffd480; ">bk</text>
+</svg>
