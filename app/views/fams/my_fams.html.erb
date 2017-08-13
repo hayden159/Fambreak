@@ -17,11 +17,11 @@
                    data-url="/update"
                    data-params="id=10"
                    data-method="put"
-                   class="estfam col-xs-4 " ><span><%= fam.name[0] %></span><br><%= fam.name %></div>
+                   class="estfam col-xs-12 " ><span><%= fam.name[0] %></span><br><%= fam.name %></div>
             <% end %>
           <% end %>
 
-            <div class="newfam-square col-xs-6"><i class="glyphicon glyphicon-plus"></i></div>
+            <div class="newfam-square col-xs-12"><i class="glyphicon glyphicon-plus"></i></div>
         </div>
 
         <div id="task-form" style="display:none;"></div>
@@ -92,12 +92,18 @@
 
   <div id="edit-fam-nav" class="row text-center navbar-fixed-bottom">
     <div class="save"><span>save <i class="glyphicon glyphicon-new-window"></i></span></div>
-    <div class="steps" >
-      <span ng-click="activeMenu = 'all_fams'" ng-class="{active : activeMenu === 'all_fams'}" class="col-xs-2 glyphicon glyphicon-plus"></span>
-      <span ng-click="activeMenu === 'all_fams' ? activeMenu = 'name_fam' : ''" ng-class="{active : activeMenu === 'name_fam', grey : activeMenu === 'all_fams'}" class="col-xs-2 glyphicon glyphicon-font"></span>
-      <span ng-click="activeMenu === 'all_fams' ? activeMenu = 'settings' : ''" ng-class="{active : activeMenu === 'settings', grey : activeMenu === 'all_fams'}" class="col-xs-2 glyphicon glyphicon-tasks"></span>
-      <span ng-click="activeMenu === 'all_fams' ? activeMenu = 'terms' : ''" ng-class="{active : activeMenu === 'terms',  grey : activeMenu === 'all_fams'}" class="col-xs-2 glyphicon glyphicon-check"></span>
-      <span ng-click="activeMenu === 'all_fams' ? activeMenu = 'notify_fam' : ''" ng-class="{active : activeMenu === 'notify_fam',  grey : activeMenu === 'all_fams'}" class="col-xs-2 glyphicon glyphicon-bullhorn"></span>
+    <div class="steps row" >
+      <span class="col-xs-1"/>
+      <span ng-click="activeMenu = 'all_fams'" ng-class="{active : activeMenu === 'all_fams'}" class="col-xs-1 glyphicon glyphicon-plus"></span>
+      <span class="col-xs-1"/>
+      <span ng-click="activeMenu === 'all_fams' ? activeMenu = 'name_fam' : ''" ng-class="{active : activeMenu === 'name_fam', grey : activeMenu === 'all_fams'}" class="col-xs-1 glyphicon glyphicon-font"></span>
+      <span class="col-xs-1"/>
+      <span ng-click="activeMenu === 'all_fams' ? activeMenu = 'settings' : ''" ng-class="{active : activeMenu === 'settings', grey : activeMenu === 'all_fams'}" class="col-xs-1 glyphicon glyphicon-tasks"></span>
+      <span class="col-xs-1"/>
+      <span ng-click="activeMenu === 'all_fams' ? activeMenu = 'terms' : ''" ng-class="{active : activeMenu === 'terms',  grey : activeMenu === 'all_fams'}" class="col-xs-1 glyphicon glyphicon-check"></span>
+      <span class="col-xs-1"/>
+      <span ng-click="activeMenu === 'all_fams' ? activeMenu = 'notify_fam' : ''" ng-class="{active : activeMenu === 'notify_fam',  grey : activeMenu === 'all_fams'}" class="col-xs-1 glyphicon glyphicon-bullhorn"></span>
+      <span class="col-xs-1"/>
     </div>
   </div>
 
