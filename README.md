@@ -4,8 +4,10 @@ Steph Hayden leisure project made public to showcase coding style. Not meant for
 
 Repo originally cloned from Heroku - ruby-getting-started (Microsoft Windows)
 
-Application: Rails
-Database: PostgreSQL
-Deployment: Heroku
+* Application: Rails
+* Database: PostgreSQL
+* Deployment: Heroku
+
+![homescreen](/screenshots/Homescreen.png)
 
 
