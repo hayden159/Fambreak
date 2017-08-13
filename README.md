@@ -1,21 +1,11 @@
-# ruby-getting-started (Microsoft Windows)
+# Fambreak 
 
-A barebones Rails app, which can easily be deployed to Heroku - on Microsoft Windows.
+Steph Hayden leisure project made public to showcase coding style. Not meant for cloning or contribution at this time.
 
-This application support the [Getting Started with Ruby on Heroku (Microsoft Windows)](https://devcenter.heroku.com/articles/getting-started-with-jruby) article - check it out.
+Repo originally cloned from Heroku - ruby-getting-started (Microsoft Windows)
 
-## Deploying to Heroku
+Application: Rails
+Database: PostgreSQL
+Deployment: Heroku
 
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku run rake db:migrate
-$ heroku open
-```
-
-## Documentation
-
-For more information about using Ruby on Heroku, see these Dev Center articles:
-
-- [Ruby on Heroku](https://devcenter.heroku.com/categories/ruby)
 
