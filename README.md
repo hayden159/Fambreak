@@ -8,6 +8,11 @@ Repo originally cloned from Heroku - ruby-getting-started (Microsoft Windows)
 * Database: PostgreSQL
 * Deployment: Heroku
 
-![homescreen](/screenshots/Homescreen.png)
+![homescreen-screenshot](/screenshots/Homescreen.png)
+![startfam-screenshot](/screenshots/Startfam.png)
+![viewall-screenshot](/screenshots/Viewall.png)
+![vieweditname-screenshot](/screenshots/Vieweditname.png)
+
+
 
 
